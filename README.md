@@ -1,4 +1,5 @@
 # Generic Restaurant Webpage
+![Restaurant_page2](https://user-images.githubusercontent.com/105423536/176177922-ab1f9a18-a7b9-428a-b55d-4ae1ab6fa8e6.gif)
 
 ## Motivations  
 I wanted to create a page that could exist somewhere as a 'real' restaurant ordering page.  <br />
