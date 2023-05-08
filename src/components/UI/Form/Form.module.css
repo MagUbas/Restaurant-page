@@ -1,0 +1,39 @@
+.inputContainer{
+   width:100%;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 20px;
+   
+}
+
+.errorForm{
+    color:red;
+    width:fit-content;
+    margin: auto;
+    padding-bottom: 15px ;
+    text-align: center;
+    width: 90%;
+}
+
+.Form{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+fieldset {
+    border-radius: 15px;
+}
+.Form legend{
+ margin-bottom: 20px;
+}
+
+@media screen and (min-width: 670px) {
+    .inputContainer{
+         padding-bottom: 0px;
+     }
+}
+
+

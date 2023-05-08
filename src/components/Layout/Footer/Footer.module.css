@@ -1,0 +1,82 @@
+.footer {
+    width: 100%;
+    height:430px;
+    background-color: green;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  text-align: center;
+}
+p:first-of-type{font-weight: bold;}
+.mail p,.address p,.tel p{
+    margin: 0;
+    margin-bottom: 5px;
+}
+.mail {padding-top: 20px}
+
+
+@media screen and (min-width: 450px){
+.footer {
+    height:300px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr ; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-areas: 
+        "mail  hours"
+        "address hours"
+        "tel ."; 
+}
+
+.mail p,.address p,.tel p{padding-left: 40px;}
+.mail { grid-area: mail; }
+.address { grid-area: address; }
+.tel { grid-area: tel; }
+.hours{
+    grid-area: hours;
+    height: 100%;
+    display: grid; 
+    grid-template-columns: 1fr ; 
+    grid-template-rows: 1fr 1fr 1fr ; 
+    grid-template-areas: 
+        "textH "
+        "MW "
+        "TS";
+}
+.textH{margin-bottom: 0; grid-area: textH;}
+.MW {margin-bottom: 0; grid-area: MW; }
+.TS { grid-area: TS; }
+}
+
+@media screen and (min-width: 800px){
+.footer {
+    height:300px;
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  grid-template-areas: 
+    "mail tel hours"
+    "address . hours"; 
+    
+}
+.tel {padding-left: 0px; padding-top: 20px; }
+}
+
+
+@media screen and (min-width: 1150px){
+
+    .footer {
+        height:200px;
+        display :flex;
+        justify-content: space-around;
+    }
+    .address {padding-top: 20px}
+    .hours{
+        height: 100%;
+        min-width: 500px;
+      grid-template-columns: 1fr 1fr ; 
+      grid-template-rows: 0.5fr 1fr  ; 
+      grid-template-areas: 
+      "textH textH"
+      "MW TS";
+        justify-items: center;
+    }
+
+} 

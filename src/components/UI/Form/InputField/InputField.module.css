@@ -1,0 +1,71 @@
+.inputField,.inputFieldInvalide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-items: center; 
+    margin: 2px 0;
+    width: 200px;  
+}
+
+.inputField input,.inputFieldInvalide input{
+    padding: 10px;
+    border: 2px solid rgb(207, 207, 207);
+    box-shadow:0 0 2em 4px rgba(0,0,0,0.1);
+    border-radius:5px;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+.inputField label, .inputFieldInvalide label{
+    margin-top: 5px;
+    padding-left: 5px;
+    align-self: flex-start;
+}
+.inputField p{
+    display:none;
+}
+
+.inputFieldInvalide p{
+    width: 90%;
+    padding-left: 5px;
+    align-self: flex-start;
+    color:red;
+    margin:0;
+    font-size: 14px;
+}
+.inputFieldInvalide input{
+    border: 2px solid red;
+    box-shadow:0 0 2em 4px rgba(0,0,0,0.1);
+}
+
+@media screen and (min-width: 670px) {
+    .inputField,.inputFieldInvalide{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas: 
+          "label input"
+          "label error"; 
+          width: 90%;
+          margin:auto  
+    }
+    .inputField label, .inputFieldInvalide label{
+        grid-area: label;
+        justify-self: end; 
+        align-self: start; 
+        margin-right: 5px;
+    }
+    .inputField input, .inputFieldInvalide input{
+        grid-area: input;
+        width: 200px;
+        justify-self: start; 
+    }
+
+    .inputFieldInvalide p{
+        grid-area: error;
+        justify-self: start; 
+    }
+
+}
+
+

@@ -1,0 +1,38 @@
+.order{
+  overflow-x:auto;
+}
+
+
+
+.modalOrderContent{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.modalOrderContent h1{
+
+  margin: 5px 0
+}
+
+.welcomeBlock{
+  background-image: url('../../food.JPG');
+    background-size: cover;
+    background-position: center;
+  height: 30vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.welcomeBlock h1{
+  width:100%;
+  padding: 10px;
+  height: 60px;
+  text-align: center;
+  background-color: green;
+  margin:0;
+}

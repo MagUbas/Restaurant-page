@@ -1,0 +1,9 @@
+.containerOrderItem {
+    display: grid ;
+    grid-template-columns: 2fr 1fr 1fr;
+    border-bottom: 1px solid;
+    width: 90%;
+    
+  }
+
+ 

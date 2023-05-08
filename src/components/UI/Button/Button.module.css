@@ -1,0 +1,30 @@
+.button,.buttonDisabled {
+    
+    border-radius: 15px;
+    border: 3px gray;
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.button{
+  background-color: green; /* Green */
+}
+
+.buttonDisabled{
+  background-color:gray
+}
+
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    color:white
+  }
+
+  .button:active {
+    background-color: #3e8e41;
+    transform: translateY(4px);
+  }

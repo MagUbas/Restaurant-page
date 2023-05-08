@@ -1,0 +1,68 @@
+.welcomeBlock{
+    background-image: url('../../food.JPG');
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.welcomeBlock h1{
+    width:100%;
+    padding: 10px;
+    height: 60px;
+    text-align: center;
+    background-color: green;
+    margin:0;
+    
+}
+
+.contentBlock{
+    padding: 20px; 
+    display:flex;
+        flex-direction: column;
+    
+    
+    
+}
+.contentBlock p {text-align: center;}
+
+.contentBlock p:first-of-type{
+    font-weight: bold;
+}
+
+.text { 
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+
+
+@media screen and (min-width: 650px) {
+    .contentBlock {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        grid-template-areas: 
+            "text text text"
+            "mail adres tel"; 
+            justify-items: center;
+    }
+    .text { 
+        width: 100%;
+        grid-area: text;
+    }
+    
+    .mail { 
+        grid-area: mail;
+    }
+    .adres { 
+        grid-area: adres;
+    }
+    .tel {
+        grid-area: tel;
+    }
+}
+
+

@@ -1,17 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
+
+import { Provider } from "react-redux";
+import Store from "./Redux/store";
+
+import App from "./App";
+import Menu from "./components/Menu/Menu";
+import Order from "./components/Order/Order";
+import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
+import AuthPage from "./components/AuthPage/AuthPage";
+import UserPage from "./components/UserPage/UserPage";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  <Provider store={Store}>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="menu" element={<Menu />} />
+          <Route path="order" element={<Order />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="auth" element={<AuthPage />} />
+          <Route path="profile" element={<UserPage />} />
+        </Route>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  </Provider>,
+  document.getElementById("root")
+);

@@ -1,0 +1,38 @@
+.userPage{
+    display: grid ;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr; 
+    margin-top:10px;
+    
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid;
+    max-width: 300px; 
+}
+.contentContainerUser{
+    max-width: 800px;
+    
+    
+}
+
+.contentContainerUser ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+} 
+.contentContainerUser li{
+    width: 90%;
+    margin: auto;
+    border-bottom: double;
+    margin-top: 10px;
+    padding-bottom: 5px;
+    
+} 
+.contentContainerUser li:last-child{
+    border: none;
+}
+
