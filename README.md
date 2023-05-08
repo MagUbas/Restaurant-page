@@ -39,10 +39,6 @@ npm install
 npm start / npm run build
 ```
 
-## If I had more time I would
-* Add testing
-* Add better validation to form
-* Add "forgot password" to logIn
  
  
  
